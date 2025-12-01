@@ -11,10 +11,10 @@ def conectar():
         con = sqlite3.connect("Empresa.db")
         con.execute("PRAGMA foreign_keys = ON;")
         cur = con.cursor()
-        print("✅ Conexión establecida correctamente")
+        print("Conexión establecida correctamente")
         return con, cur
     except sqlite3.Error as e:
-        print(f"❌ Error al conectar a la base de datos: {e}")
+        print(f"Error al conectar a la base de datos: {e}")
         return None, None
 
 if __name__ == "__main__":
